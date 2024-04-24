@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = "mongodb+srv://hanvietha141:hanvietha141@express-nextjs.2aezl0o.mongodb.net/express-nodejs"
+}
+
+model todo {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  status   Boolean
+  todoId   String?
+  todoName String?
+  totoId   Int?
+  totoName String?
+}
+
+model uers {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  avartar  String?
+  name     String
+  password String?
+  userId   String
+  username String?
+}
+
+model users {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  avartar  String?
+  name     String
+  password String?
+  userId   String
+  username String?
+}
+
