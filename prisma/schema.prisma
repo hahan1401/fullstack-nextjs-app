@@ -26,11 +26,6 @@ model uers {
 }
 
 model users {
-  id       String  @id @default(auto()) @map("_id") @db.ObjectId
-  avartar  String?
-  name     String
-  password String?
-  userId   String
-  username String?
+  id String @id @default(uuid()) @map("_id")
+  name String
 }
-
